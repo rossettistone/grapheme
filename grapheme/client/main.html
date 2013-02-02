@@ -32,8 +32,21 @@
 <template name="content">
   <div class="span6 offset3 content well">
     <div class="row-fluid">
-      <input id="userstring" class="span10" type="text" placeholder="Input sentence here">
-      <input type="button" class="span2 btn btn-primary" value="Parse">
+      <input id="userstring" class="span10 search-query" type="text" placeholder="The quick brown fox jumped over the lazy dog.">
+      <input id="usersubmit" type="button" class="span2 btn btn-primary" value="Parse">
+    </div>
+    <div class="row-fluid">
+      <div class="span12 well">
+        <span class="pos DT">The</span>
+        <span class="pos JJ">quick</span>
+        <span class="pos JJ">brown</span>
+        <span class="pos NN">fox</span>
+        <span class="pos VB">jumped</span>
+        <span class="pos IN">over</span>
+        <span class="pos DT">the</span>
+        <span class="pos JJ">lazy</span>
+        <span class="pos NN">dog.</span>
+      </div>
     </div>
     <div class="row-fluid">
       <div class="span8 well">
@@ -44,21 +57,17 @@
       </div>
       <div class="span4 well">
         <ul>
-          <li class="">Conjunction</li>
-          <li class="">Determiner</li>
-          <li class="">Adjective</li>
-          <li class="">Noun</li>
-          <li class="">Pronoun</li>
-          <li class="">Predeterminer</li>
-          <li class="">Adverb</li>
-          <li class="">Interjection</li>
-          <li class="">Verb</li>
-          <li class="">Punctuation/Symbols</li>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span12 well">
-        This is the lower content area.
+          <li class="pos CC">Conjunction</li>
+          <li class="pos DT">Determiner</li>
+          <li class="pos IN">Preposition</li>
+          <li class="pos JJ">Adjective</li>
+          <li class="pos NN">Noun</li>
+          <li class="pos NNP">Pronoun</li>
+          <li class="pos PDT">Predeterminer</li>
+          <li class="pos EX">Adverb</li>
+          <li class="pos UH">Interjection</li>
+          <li class="pos VB">Verb</li>
+          <li class="pos URL">Punc./Sym.</li>
       </div>
     </div>
   </div>
