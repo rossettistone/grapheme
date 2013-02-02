@@ -6,7 +6,9 @@ Template.content.events({
   }
 });
 
-Meteor.call("longmanAPICall", function(error, results) {
+var word = "apple";
+
+Meteor.call("longmanAPICall", word, function(error, results) {
 		var longmanEntry = results.content;
     console.log(longmanEntry); 
     return longmanEntry;
