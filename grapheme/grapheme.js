@@ -13,6 +13,20 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
+  Meteor.methods({
+    parsePOS: function (prePOS) {
+      var words = new Lexer().lex(prePOS);
+      var taggedWords = new POSTagger().tag(words);
+      for (i in taggedWords) {
+        var taggedWord = taggedWords[i];
+        var word = taggedWord[0];
+        var tag = taggedWord[1];
+        // TODO figure out what to return to client.
+        console.log(word + " /" + tag);
+      };
+    }
+  });
+
   Meteor.startup(function () {
     // code to run on server at startup
   });
