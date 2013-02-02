@@ -6,12 +6,16 @@ Template.content.events({
   }
 });
 
-var sentence;
-var word = "after";
+var sentence = "The quick brown";
+var sentenceArray = sentence.split(" ");
 
-Meteor.call("longmanAPICall", word, function(error, results) {
-		var entry = results.content;
-    console.log(entry); 
-    return entry;
-});
+for (var i = 0; i <= sentenceArray.length; i++) {
+	Meteor.call("longmanAPICall", sentenceArray[i], function(error, results) {
+			var entry = results.content;
+	    console.log(entry); 
+	    return entry;
+	});
+}
+// var word = "after";
+
 
