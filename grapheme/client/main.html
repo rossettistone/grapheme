@@ -1,0 +1,74 @@
+<head>
+  <title>grapheme</title>
+</head>
+
+<body>
+  {{> container}}
+</body>
+
+<template name="container">
+  <div class="container-fluid">
+      {{> navbar}}
+      <div class="row-fluid">
+        {{> content}}
+      </div>
+      {{> footer}}
+    </div>
+</template>
+
+<template name="navbar">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="../">Bootswatch</a>
+        <ul>
+          <li>About</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="content">
+  <div class="span6 offset3 content well">
+    <div class="row-fluid">
+      <input id="userstring" class="span10" type="text" placeholder="Input sentence here">
+      <input type="button" class="span2 btn btn-primary" value="Parse">
+    </div>
+    <div class="row-fluid">
+      <div class="span8 well">
+        This is the left content area.
+      </div>
+      <div class="span4 well">
+        <ul>
+          <li class="">Conjunction</li>
+          <li class="">Determiner</li>
+          <li class="">Adjective</li>
+          <li class="">Noun</li>
+          <li class="">Pronoun</li>
+          <li class="">Predeterminer</li>
+          <li class="">Adverb</li>
+          <li class="">Interjection</li>
+          <li class="">Verb</li>
+          <li class="">Punctuation/Symbols</li>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span12 well">
+        This is the lower content area.
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="footer">
+  <footer class="row-fluid">
+    <div class="navbar navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <ul class="nav pull-right">
+          <li><a href="http://www.github.com/rossetti211/grapheme">Source Code</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</template>
