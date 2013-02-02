@@ -1,0 +1,68 @@
+.CC {
+  color: #bbbbbb;
+}
+
+.DT {
+  color: #E6DB74;
+}
+
+.IN,
+.TO {
+  color: #AE81FF;
+}
+
+.JJ,
+.JJR,
+.JJS {
+  color:#66D9EF;
+}
+
+.NN,
+.NNS,
+.CD,
+.POS {
+  color:#A6E22E;
+}
+
+.NNP,
+.NNPS,
+.PPS,
+.PRP,
+.WDT,
+.WP,
+.WPS{
+  color:#F8F8F0;
+}
+
+.PDT{
+  color:#0099bb;
+}
+
+.EX,
+.RB,
+.RBR,
+.RBS,
+.WRB,
+.RP{
+  color:#F92672;
+}
+
+.UH{
+  color:#9D550F;
+}
+
+.VB,
+.VBD,
+.VBG,
+.VBN,
+.VBP,
+.VBZ,
+.MD {
+  color:#FD971F;
+}
+
+.URL,
+.LS,
+.FW{
+  color:#75715E;
+}
