@@ -7,7 +7,7 @@ Template.content.events({
 });
 
 var sentence;
-var word = "hello";
+var word = "after";
 
 Meteor.call("longmanAPICall", word, function(error, results) {
 		var entry = results.content;
