@@ -3,11 +3,49 @@
 </head>
 
 <body>
-  {{> hello}}
+  {{> container }}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="container">
+  <div class="container-fluid">
+      {{> navbar}}
+      <div class="row-fluid">
+        {{> content}}
+      </div>
+      {{> footer}}
+    </div>
+</template>
+
+<template name="navbar">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="../">Bootswatch</a>
+        <ul>
+          <li>About</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="content">
+  <div class="span6 offset3 content well">
+    <div>
+      <input type="text" placeholder="Input sentence here">
+      <input type="button" class="btn btn-primary" value="Parse">
+    </div>
+  </div>
+</template>
+
+<template name="footer">
+  <footer class="row-fluid">
+    <div class="navbar navbar-fixed-bottom">
+    <div class="navbar-inner">
+      <ul class="nav pull-right">
+        <li><a href="http://www.github.com/rossetti211/grapheme">Source Code</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
 </template>
