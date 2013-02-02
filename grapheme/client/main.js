@@ -6,8 +6,12 @@ Template.content.events({
   }
 });
 
-Meteor.call("longmanAPICall", function(error, results) {
-		var longmanEntry = results.content;
-    console.log(longmanEntry); 
-    return longmanEntry;
+var sentence;
+var word = "hello";
+
+Meteor.call("longmanAPICall", word, function(error, results) {
+		var entry = results.content;
+    console.log(entry); 
+    return entry;
 });
+
