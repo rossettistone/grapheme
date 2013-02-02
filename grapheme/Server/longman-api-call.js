@@ -8,3 +8,4 @@ if (Meteor.isServer) {
 	    }
 	});
 }
+

@@ -13,3 +13,4 @@ Meteor.call("longmanAPICall", word, function(error, results) {
     console.log(longmanEntry); 
     return longmanEntry;
 });
+
