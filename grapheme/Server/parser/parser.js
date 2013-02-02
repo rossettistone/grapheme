@@ -1,6 +1,7 @@
 Meteor.startup(function () {
+  console.log("startup block")
   LastPhrase.remove({});
-  LastPhrase.insert({phrase: "nothing"});
+  LastPhrase.insert({phrase: [["nothing", "NN"]]});
 });
 
 Meteor.methods({
