@@ -5,3 +5,9 @@ Template.content.events({
     // Meteor.call('parsePOS', string)
   }
 });
+
+Meteor.call("longmanAPICall", function(error, results) {
+		var longmanEntry = results.content;
+    console.log(longmanEntry); 
+    return longmanEntry;
+});
