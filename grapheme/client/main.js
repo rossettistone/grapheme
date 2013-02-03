@@ -3,6 +3,10 @@ Template.content.events({
     // submit user input data for parsing
     var string = document.getElementById("userstring").value;
     Meteor.call('parsePOS', string);
+  },
+  'click input.audiobutton' : function (e) {
+    var word = "banana"
+    Meteor.call('getMultiMedia', word);
   }
 });
 
@@ -19,4 +23,8 @@ Template.content.rendered = function () {
 
 Template.content.hasUserInput = function () {
   return Session.get('parsedWords');
+};
+
+Template.content.getAudio = function () {
+  return Session.get('audioURL');
 };
