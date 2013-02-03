@@ -9,8 +9,8 @@ Template.content.events({
 var word = "apple";
 
 Meteor.call("longmanAPICall", word, function(error, results) {
-		var longmanEntry = results.content;
+		longmanEntry = results.content;
     console.log(longmanEntry); 
+    UserDict.insert({word: "beatles", entry: longmanEntry})
     return longmanEntry;
 });
-
