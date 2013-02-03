@@ -1,5 +1,5 @@
 Template.content.events({
-  'click input.btn' : function (e) {
+  'keyup input' : function (event) {
     // submit user input data for parsing
     var string = document.getElementById("userstring").value;
     Meteor.call('parsePOS', string);
