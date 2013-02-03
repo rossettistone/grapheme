@@ -16,10 +16,8 @@ Template.dictionary.word = function(){
 
 Template.dictionary.definition = function () {
   var word = Session.get('currentWord');
-  console.log(word);
   var result = UserDictionary.findOne({word: word});
   if(result) {
-    console.log(result.entry);
     return result.entry;
   }
 }
