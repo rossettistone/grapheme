@@ -8,6 +8,6 @@ Meteor.methods({
   parsePOS: function (prePOS) {
     var words = new Lexer().lex(prePOS);
     var taggedWords = new POSTagger().tag(words);
-    LastPhrase.update({phrase: /.+/}, {phrase: taggedWords});
+    LastPhrase.update({}, {phrase: taggedWords});
   }
 });
