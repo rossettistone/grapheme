@@ -2,7 +2,8 @@ Template.content.events({
   'click input.btn' : function (e) {
     // submit user input data for parsing
     var string = document.getElementById("userstring").value;
-    Meteor.call('parsePOS', string);
+    Meteor.call("getMultiMedia", string);
+    // Meteor.call('parsePOS', string);
   }
 });
 
