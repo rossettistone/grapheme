@@ -6,5 +6,5 @@ Template.content.events({
   }
 });
 
-word = "table";
-Meteor.call("checkDb", word); // , function(error, results) {]
+word = currentWord; //currentWord returned from the clickhandler
+Meteor.call("checkDb", word);
