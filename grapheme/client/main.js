@@ -5,9 +5,6 @@ Template.content.events({
     Meteor.call('parsePOS', string);
   },
   'mouseenter span': function (event) {
-    var paragraph = event.currentTarget; // always a P
-    console.log(event.target.classList[1])
-    var clickedElement = event.target; // could be the P or a child element
     Session.set('currentPOS', event.target.classList[1])
   }
 });
