@@ -14,8 +14,8 @@ Template.content.parsedArray = function () {
 };
 
 Template.content.rendered = function () {
-  $('[rel=tooltip]').tooltip()
-}
+  $('[rel=tooltip]').tooltip();
+};
 
 Template.content.hasUserInput = function () {
   return Session.get('parsedWords');
