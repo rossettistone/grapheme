@@ -12,7 +12,9 @@ Meteor.methods({
     } else {
       // Production key: 2884334e050d5be2e5f001d00b4f1d28
       // Sandbox key: e8d52ef4a973002f8f8d9cee12a6c213
-      Session.set('audioURL', "https://api.pearson.com/longman/dictionary/0.1/" + getMMAddr(target) + "?apikey=e8d52ef4a973002f8f8d9cee12a6c213");
+      var urlFragment = getMMAddr(target);
+      console.log(urlFragment)
+      Session.set('audioURL', "https://api.pearson.com/longman/dictionary/0.1/" + urlFragment + "?apikey=e8d52ef4a973002f8f8d9cee12a6c213")
     }
   }
 });
