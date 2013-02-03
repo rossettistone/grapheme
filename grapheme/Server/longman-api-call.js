@@ -15,12 +15,20 @@ if (Meteor.isServer) {
 
 function longmanAPICall(word) {
 	console.log("in longmanAPICall, word = " + word);
-  var url = "https://api.pearson.com/longman/dictionary/entry.json?q=" + word + "&apikey=2884334e050d5be2e5f001d00b4f1d28";
+
+  var url = "http://api.wordnik.com//v4/word.json/" + word + "/definitions?includeRelated=false&includeTags=false&useCanonical=false&api_key=d103d202714dcea7f420d0d9ca90ddc01f1203225c8df91b6";
   console.log("url = " + url);
   results = Meteor.http.call("GET", url);
-	longmanEntry = results.content;
-  console.log("longmanEntry = " + longmanEntry); 
-	json = {word: word, entry: longmanEntry};
+	wordnikEntry = results.content;
+  console.log("wordnikEntry = " + wordnikEntry);
+  wordnikParsed = JSON.parse(wordnikEntry); 
+  console.log("wordnikEntry = " + wordnikParsed[0]["text"]); 
+	json = {word: word, entry: wordnikEntry[0]["text"]};
   UserDictionary.insert(json)
+
+
+
 	// call the helper function from here
 }
+
+
