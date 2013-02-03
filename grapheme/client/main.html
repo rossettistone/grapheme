@@ -40,7 +40,7 @@
           <span>Enter a word or sentence above and click "parse"!</span>
         {{/unless}}
         {{#each parsedArray}}
-          <span class="pos {{[1]}}">{{[0]}}</span>
+          <span rel="tooltip" data-title="Dieser Link führt zu Google" class="pos {{[1]}}">{{[0]}}</span>
         {{/each}}
       </div>
     </div>
