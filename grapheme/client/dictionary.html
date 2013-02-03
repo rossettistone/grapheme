@@ -2,5 +2,12 @@
   <div class = "{{POS}}"> {{word}} </div>
 
   <div class = "definition">1. {{definition}}</div>
+  {{# constant}}
+    <input class="btn btn-primary audiobutton" type="button" value="Get Pronunciation">
+    <audio controls>
+      <source src="{{getAudio}}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  {{/constant}}
 
 </template>
