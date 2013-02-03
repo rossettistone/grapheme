@@ -10,7 +10,10 @@ Template.content.parsedArray = function () {
   // var parseRes = LastPhrase.findOne();
   var parseRes = Session.get('parsedWords');
   if (parseRes) {
-    console.log(parseRes)
     return parseRes;
   }
-}
+};
+
+Template.content.hasUserInput = function () {
+  return Session.get('parsedWords');
+};

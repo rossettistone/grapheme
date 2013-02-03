@@ -36,6 +36,9 @@
     </div>
     <div class="row-fluid">
       <div class="span12 well">
+        {{#unless hasUserInput}}
+          <span>Enter a word or sentence above and click "parse"!</span>
+        {{/unless}}
         {{#each parsedArray}}
           <span class="pos {{[1]}}">{{[0]}}</span>
         {{/each}}
