@@ -6,7 +6,7 @@ var wordExistsInUserDict = function(word){
   return UserDict.findOne({word:word});
 }
 
-
+//TO DO: clicking a word makes a dictionary api call
 Template.content.events({
   'click span': function (event) {
     var paragraph = event.currentTarget; // always a P
@@ -16,6 +16,15 @@ Template.content.events({
   }
 })
 
+
+Template.content.events({
+  'mouseenter span': function (event) {
+    var paragraph = event.currentTarget; // always a P
+    console.log(event.target.classList[1])
+    var clickedElement = event.target; // could be the P or a child element
+    Session.set('currentPOS', event.srcElement.innerHTML)
+  }
+})
 
 
 Template.dictionary.word = function(){
