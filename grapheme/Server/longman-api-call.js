@@ -1,15 +1,15 @@
 if (Meteor.isServer) {
 	Meteor.methods({
 		checkDb: function (word) {
-			if (UserDictionary.findOne({word: word}) === undefined) { 
+			if (UserDictionary.findOne({word: word}) === undefined) {
 				console.log(word + ": query returned undefined");
-				longmanAPICall(word) 
+				longmanAPICall(word)
 		  } else {
 				console.log(word + ": query returned an object");
 				console.log(UserDictionary.findOne({word: word}));
 				// word was already in db - call the helper function from here
 			}
-		}		
+		}
 	})
 }
 
@@ -21,9 +21,9 @@ function longmanAPICall(word) {
   results = Meteor.http.call("GET", url);
 	wordnikEntry = results.content;
   console.log("wordnikEntry = " + wordnikEntry);
-  wordnikParsed = JSON.parse(wordnikEntry); 
-  console.log("wordnikEntry = " + wordnikParsed[0]["text"]); 
-	json = {word: word, entry: wordnikEntry[0]["text"]};
+  wordnikParsed = JSON.parse(wordnikEntry);
+  console.log("wordnikEntry = " + wordnikParsed[0]["text"]);
+	json = {word: word, entry: wordnikParsed[0]["text"]};
   UserDictionary.insert(json)
 
 

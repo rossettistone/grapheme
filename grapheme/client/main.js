@@ -6,11 +6,13 @@ Template.content.events({
   },
   'mouseenter span': function (event) {
     Session.set('currentPOS', event.target.classList[1])
+  },
+  'click span': function (event) {
+    var word = event.target.innerHTML; // could be the P or a child element
+    Session.set('currentWord', word)
+    Meteor.call("checkDb", word);
   }
 });
-
-word = "table"; //currentWord returned from the clickhandler
-Meteor.call("checkDb", word);
 
 Template.content.parsedArray = function () {
   var parseRes = Session.get('parsedWords');
@@ -26,15 +28,6 @@ Template.content.rendered = function () {
 Template.content.hasUserInput = function () {
   return Session.get('parsedWords');
 };
-
-//TO DO: clicking a word makes a dictionary api call
-Template.content.events({
-  'click span': function (event) {
-    var paragraph = event.currentTarget; // always a P
-    var clickedElement = event.target; // could be the P or a child element
-    Session.set('currentWord', event.srcElement.innerHTML)
-  }
-});
 
 Template.content.partOfSpeech = function(){
   var returnPOS = Session.get('currentPOS');

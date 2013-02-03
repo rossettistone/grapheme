@@ -1,5 +1,3 @@
-// Meteor.call('dictionary', "word")
-
 Template.dictionary.events({
   'click input.audiobutton' : function (e) {
     var word = "banana"
@@ -12,9 +10,19 @@ var wordExistsInUserDict = function(word){
 };
 
 Template.dictionary.word = function(){
-  var returnWord = Session.get('currentWord')
+  var returnWord = Session.get('currentWord');
   return returnWord;
 };
+
+Template.dictionary.definition = function () {
+  var word = Session.get('currentWord');
+  console.log(word);
+  var result = UserDictionary.findOne({word: word});
+  if(result) {
+    console.log(result.entry);
+    return result.entry;
+  }
+}
 
 Template.dictionary.getAudio = function () {
   return Session.get('audioURL');

@@ -1,5 +1,9 @@
 /* CSS declarations go here */
 
+.hide {
+  display: none;
+}
+
 #userstring {
   margin-bottom: 15px;
 }
