@@ -10,11 +10,16 @@ var wordExistsInUserDict = function(word){
 Template.content.events({
   'click span': function (event) {
     var paragraph = event.currentTarget; // always a P
-    console.log(event.srcElement.innerHTML)
     var clickedElement = event.target; // could be the P or a child element
     Session.set('currentWord', event.srcElement.innerHTML)
   }
 })
+
+Template.content.partOfSpeech = function(){
+  var returnPOS = Session.get('currentPOS');
+  returnPOS = posToWord(returnPOS);
+  return returnPOS;
+}
 
 
 Template.content.events({
@@ -22,7 +27,8 @@ Template.content.events({
     var paragraph = event.currentTarget; // always a P
     console.log(event.target.classList[1])
     var clickedElement = event.target; // could be the P or a child element
-    Session.set('currentPOS', event.srcElement.innerHTML)
+    Session.set('currentPOS', event.target.classList[1])
+
   }
 })
 

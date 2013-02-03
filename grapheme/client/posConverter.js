@@ -1,4 +1,4 @@
-var check = function(pos){
+var posToWord = function(pos){
   var partOfSpeech = ""
   switch (pos) {
    case "CC":
@@ -16,7 +16,7 @@ var check = function(pos){
    case "NN": case "NNS": case "CD": case "POS":
      partOfSpeech = "noun";
       break;
-   case "NNP": case "NNPS": case "PPS": case "PRP": case "WDT": case "WP": case "WPS":
+   case "NNP": case "NNPS": case "PP$": case "PRP": case "PRP$": case "WDT": case "WP": case "WP$":
      partOfSpeech = "pronoun";
       break;
    case "PDT":

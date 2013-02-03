@@ -32,11 +32,12 @@
 
 .NNP,
 .NNPS,
-.PPS,
+.PP$,
 .PRP,
+.PRP$,
 .WDT,
 .WP,
-.WPS{
+.WP${
   color:#F8F8F0;
 }
 
