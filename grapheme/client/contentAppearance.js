@@ -34,7 +34,7 @@ Template.content.legendOff = function(){
 }
 
 Template.content.events({
-  'click .showLegend': function (event) {   
+  'click .showLegend': function (event) {
     Session.set('showLegend', true)
   }
 })
