@@ -1,5 +1,6 @@
-grapheme (|ˈgrafēm|)
+grapheme 
 ========
+| ˈgrafēm |
 
 A grammar, dictionary, and pronunciation tool for English learners. Instant part-of-speech parsing, dictionary definitions, and clear audio pronunciations at your fingertips.
 
