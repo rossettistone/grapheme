@@ -14,6 +14,12 @@ Template.content.events({
   }
 });
 
+Template.content.highlight = function () {
+  if(Session.get('currentWord') === this[0]) {
+    return "highlight";
+  }
+}
+
 Template.content.parsedArray = function () {
   var parseRes = Session.get('parsedWords');
   if (parseRes) {

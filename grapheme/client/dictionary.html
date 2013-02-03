@@ -1,7 +1,7 @@
 <template name="dictionary">
-  <div class = "{{POS}}"> {{word}} </div>
+  <div class = "{{POS}}"><h5> {{word}} </h5></div>
 
-  <div class = "definition">1. {{definition}}</div>
+  <div class = "definition">{{definition}}</div>
     <input class="hide btn btn-small audiobutton" type="button" value="Get Pronunciation">
     <audio controls class="hide">
       <source src="{{getAudio}}" type="audio/mpeg">

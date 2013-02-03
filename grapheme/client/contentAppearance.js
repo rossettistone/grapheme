@@ -1,4 +1,9 @@
-Meteor.startup(Session.set('showLegend', false))
+Meteor.startup(function() {
+  Session.set('showLegend', false)
+  var openingPhrase = "The quick brown fox jumped over the lazy dog."
+  Meteor.call('parsePOS', openingPhrase)
+  Session.set('currentWord', 'quick')
+});
 
 Template.content.dictionaryWellSize = function(){
   if(Session.get('showLegend')===true){
