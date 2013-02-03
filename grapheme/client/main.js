@@ -6,14 +6,25 @@ Template.content.events({
   }
 });
 
-word = "banana";
+var hasWord
+	, word = "banana";
+
+console.log(word)
+
+if (UserDict.findOne({word: word}) === (null || undefined)) { 
+	hasWord = false; 
+} else {
+	hasWord = true;
+}
+
+// var hasWord = Meteor.call("dbHasWord", word);
+console.log(hasWord);
 
 
-Meteor.call("longmanAPICall", word, function(error, results) {
-		longmanEntry = results.content;
-    console.log("longmanEntry = " + longmanEntry); 
-    console.log("word = " + word);
-		json = {word: word, entry: longmanEntry};
-    UserDict.insert(json)
-    return longmanEntry;
-});
+// Meteor.call("longmanAPICall", word, function(error, results) {
+// 		longmanEntry = results.content;
+//     console.log("longmanEntry = " + longmanEntry); 
+// 		json = {word: word, entry: longmanEntry};
+//     UserDict.insert(json)
+//     return longmanEntry;
+// });
