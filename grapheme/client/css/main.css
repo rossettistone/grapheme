@@ -9,7 +9,7 @@
 }
 
 .content {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .highlight {
@@ -19,4 +19,17 @@
 .unstyledlist {
   list-style: none;
   margin-left: 0;
+}
+
+.legendToggle {
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+
+.results {
+  margin-top: 5px; 
+}
+
+.searchInverse {
+  background-color: #49515a;
 }
