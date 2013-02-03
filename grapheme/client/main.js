@@ -7,7 +7,6 @@ Template.content.events({
 });
 
 Template.content.parsedArray = function () {
-  // var parseRes = LastPhrase.findOne();
   var parseRes = Session.get('parsedWords');
   if (parseRes) {
     return parseRes;
