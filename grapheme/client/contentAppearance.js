@@ -2,7 +2,7 @@ Meteor.startup(function() {
   Session.set('showLegend', false)
   var openingPhrase = "The quick brown fox jumped over the lazy dog."
   Meteor.call('parsePOS', openingPhrase)
-  Session.set('currentWord', 'quick')
+  Session.set('currentWord', 'dog')
 });
 
 Template.content.dictionaryWellSize = function(){
