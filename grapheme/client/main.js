@@ -12,7 +12,7 @@ Template.content.events({
   }
 });
 
-word = currentWord; //currentWord returned from the clickhandler
+word = "banana"; //currentWord returned from the clickhandler
 Meteor.call("checkDb", word);
 
 Template.content.parsedArray = function () {
