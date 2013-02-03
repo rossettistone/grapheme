@@ -4,10 +4,6 @@ Template.content.events({
     var string = document.getElementById("userstring").value;
     Meteor.call('parsePOS', string);
   },
-  'click input.audiobutton' : function (e) {
-    var word = "banana"
-    Meteor.call('getMultiMedia', word);
-  },
   'mouseenter span': function (event) {
     var paragraph = event.currentTarget; // always a P
     console.log(event.target.classList[1])

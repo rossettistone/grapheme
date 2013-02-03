@@ -1,4 +1,11 @@
-Meteor.call('dictionary', "word")
+// Meteor.call('dictionary', "word")
+
+Template.dictionary.events({
+  'click input.audiobutton' : function (e) {
+    var word = "banana"
+    Meteor.call('getMultiMedia', word);
+  }
+});
 
 var wordExistsInUserDict = function(word){
   return UserDict.findOne({word:word});
