@@ -1,12 +1,13 @@
 Meteor.startup(function () {
-  LastPhrase.insert({phrase: "nothing"});
-  // code to run on server at startup
+  console.log("startup block")
+  LastPhrase.remove({});
+  LastPhrase.insert({phrase: [["nothing", "NN"]]});
 });
 
 Meteor.methods({
   parsePOS: function (prePOS) {
     var words = new Lexer().lex(prePOS);
     var taggedWords = new POSTagger().tag(words);
-    LiveCode.update({phrase: /.+/}, {phrase: taggedWords});
+    LastPhrase.update({}, {phrase: taggedWords});
   }
 });

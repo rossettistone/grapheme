@@ -36,15 +36,9 @@
     </div>
     <div class="row-fluid">
       <div class="span12 well">
-        <span class="pos DT">The</span>
-        <span class="pos JJ">quick</span>
-        <span class="pos JJ">brown</span>
-        <span class="pos NN">fox</span>
-        <span class="pos VB">jumped</span>
-        <span class="pos IN">over</span>
-        <span class="pos DT">the</span>
-        <span class="pos JJ highlight">lazy</span>
-        <span class="pos NN">dog.</span>
+        {{#each parsedArray}}
+          <span class="pos {{[1]}}">{{[0]}}</span>
+        {{/each}}
       </div>
     </div>
     <div class="row-fluid">
