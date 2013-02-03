@@ -1,6 +1,6 @@
-UserDict = new Meteor.Collection("UserDictionary");
+UserDictionary = new Meteor.Collection("user-dictionary");
 
-console.log(UserDict.find({word:"apple"}));
+// console.log(UserDictionary.find({word:"apple"}));
 
 
 // LastPhrase = new Meteor.Collection("lastPhrase");
