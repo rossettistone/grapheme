@@ -11,6 +11,7 @@ Template.content.events({
     var word = event.target.innerHTML; // could be the P or a child element
     Session.set('currentWord', word)
     Meteor.call("checkDb", word);
+    Meteor.call('getMultiMedia', word);
   }
 });
 
