@@ -42,7 +42,7 @@ Template.content.partOfSpeech = function () {
 };
 
 Template.analytics.rendered = function () {
-  window._gaq = _gaq || [];
+  var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-38251628-1']);
     _gaq.push(['_trackPageview']);
 
