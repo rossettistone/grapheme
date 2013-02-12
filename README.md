@@ -19,7 +19,7 @@ Dependencies:
 * [Meteor](http://meteor.com/)
 * [Meteorite](http://oortcloud.github.com/meteorite/)
 * [Pos-js](https://github.com/fortnightlabs/pos-js)
-* [Pearson API](http://developer.pearson.com/)
+* [Wordnik API](http://developer.wordnik.com/)
 
 1) [Install Meteor](https://github.com/meteor/meteor)
 
