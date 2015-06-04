@@ -18,7 +18,7 @@ If you're looking to fork and hack on this repo, read on...
 Dependencies:
 * [Meteor](http://meteor.com/)
 * [Meteorite](http://oortcloud.github.com/meteorite/)
-* [Pos-js](https://github.com/fortnightlabs/pos-js)
+* [Pos-js](https://github.com/neopunisher/pos-js)
 * [Wordnik API](http://developer.wordnik.com/)
 
 1) [Install Meteor](https://github.com/meteor/meteor)
