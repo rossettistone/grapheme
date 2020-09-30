@@ -2,7 +2,7 @@ grapheme
 ========
 | ˈgrafēm |
 
-A grammar, dictionary, and pronunciation tool for English learners. Instant part-of-speech parsing, dictionary definitions, and clear audio pronunciations at your fingertips.
+An awesome grammar, dictionary, and pronunciation tool for English learners. Instant part-of-speech parsing, dictionary definitions, and clear audio pronunciations at your fingertips.
 
 Leveraging the power of Meteor (with Meteorite), pos-js, and the Longman Dictionary API from Pearson, grapheme is an easy-to-use homework helper for students of the English language. Words and sentences input by the user are instantly parsed into parts of speech (e.g. 'noun', 'adjective', 'adverb') and highlighted in different colors for easy reference.
 
